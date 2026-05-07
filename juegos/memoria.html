@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Juego de Memoria</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+}
+
+h1{
+    margin-top:20px;
+}
+
+.grid{
+    width:420px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,100px);
+    gap:10px;
+    margin-top:30px;
+}
+
+.card{
+    width:100px;
+    height:100px;
+    background:#6a00ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    cursor:pointer;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎮 Juego de Memoria Gamer</h1>
+
+<div class="grid" id="grid"></div>
+
+<script>
+const emojis = ["🎮","👾","🕹️","🔥","🎮","👾","🕹️","🔥"];
+
+let mezcladas = emojis.sort(() => 0.5 - Math.random());
+
+const grid = document.getElementById("grid");
+
+let primera = null;
+let segunda = null;
+
+mezcladas.forEach((emoji)=>{
+
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.dataset.valor = emoji;
+    card.innerHTML = "?";
+
+    card.onclick = ()=>{
+
+        if(card.innerHTML !== "?") return;
+
+        card.innerHTML = emoji;
+
+        if(!primera){
+            primera = card;
+        }else{
+            segunda = card;
+
+            if(primera.dataset.valor === segunda.dataset.valor){
+
+                primera = null;
+                segunda = null;
+
+            }else{
+
+                setTimeout(()=>{
+                    primera.innerHTML = "?";
+                    segunda.innerHTML = "?";
+
+                    primera = null;
+                    segunda = null;
+                },1000);
+            }
+        }
+    }
+
+    grid.appendChild(card);
+});
+</script>
+
+</body>
+</html>

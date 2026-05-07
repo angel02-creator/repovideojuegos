@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎮 MUNDO GAMER</h1>
+    <p>Historia, juegos famosos y juegos didácticos</p>
+</header>
+
+<nav>
+    <a href="#historia">Historia</a>
+    <a href="#juegos">Juegos Famosos</a>
+    <a href="#didacticos">Juegos Didácticos</a>
+</nav>
+
+<section class="banner">
+    <h2>Bienvenido al universo gamer</h2>
+</section>
+
+<section id="historia">
+    <h2>📜 Historia de los Videojuegos</h2>
+    <p>
+        Los videojuegos nacieron en los años 50 como experimentos electrónicos.
+        En 1972 apareció Pong, uno de los primeros videojuegos comerciales.
+        Después llegaron consolas famosas como Atari, Nintendo, PlayStation y Xbox.
+        Actualmente los videojuegos son una de las industrias más grandes del mundo.
+    </p>
+</section>
+
+<section id="juegos">
+    <h2>🔥 Juegos Más Conocidos</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="img/mario.jpg" alt="Mario">
+            <h3>Super Mario</h3>
+            <p>Uno de los videojuegos más famosos de Nintendo.</p>
+        </div>
+
+        <div class="card">
+            <img src="img/minecraft.jpg" alt="Minecraft">
+            <h3>Minecraft</h3>
+            <p>Juego de construcción y aventura muy popular.</p>
+        </div>
+
+        <div class="card">
+            <img src="img/gta.jpg" alt="GTA V">
+            <h3>GTA V</h3>
+            <p>Videojuego de mundo abierto y acción.</p>
+        </div>
+
+        <div class="card">
+            <img src="img/fortnite.jpg" alt="Fortnite">
+            <h3>Fortnite</h3>
+            <p>Battle Royale competitivo con millones de jugadores.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="didacticos">
+    <h2>🧠 Juegos Didácticos</h2>
+
+    <div class="quiz">
+        <h3>Pregunta Gamer</h3>
+
+        <p>¿Qué empresa creó Super Mario?</p>
+
+        <button onclick="respuesta('incorrecto')">Sony</button>
+        <button onclick="respuesta('correcto')">Nintendo</button>
+        <button onclick="respuesta('incorrecto')">Microsoft</button>
+
+        <h4 id="resultado"></h4>
+    </div>
+
+    <div class="memoria">
+        <a href="juegos/memoria.html">
+            <button>🎲 Abrir Juego de Memoria</button>
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Mundo Gamer | Página creada para GitHub</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
