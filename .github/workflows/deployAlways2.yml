@@ -20,7 +20,7 @@ jobs:
           server: ftp-soto.alwaysdata.net # Change if using another host
           username: soto
           password: clase1234
-          server-dir: www/cliente1/ # Replace with your correct path
+          server-dir: # Replace with your correct path
           protocol: ftps
           timeout: 86400000
           log-level: standard
